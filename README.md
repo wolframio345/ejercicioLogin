@@ -1,16 +1,23 @@
 # login
 
-A new Flutter project.
+Proyecto de pruebea para el login usando patrón bloc
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Este proyecto simula un inicio de sesión conteniendo 2 pantallas, el login y la bienvenida.
 
-A few resources to get you started if this is your first Flutter project:
+Valida que los campos de inicio de sesión no esten vación, que la contraseña se oculte y se muestre, y que el campo de usuario sea un correo electronico
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+los datos de inicio de sesión para esta prueba son: 
+-Usuario:prueba@example.com
+-Password: test1234
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ubicados en la carpeta data en datos_usuario.dart
+
+# Logica de negocio:
+El sistema valida que no exista ningun token y muestra la pantalal de inicio de sesión, si el toeken existe redirecciona a la pantalla de bienvenida y si nó a la de }
+inicio de sesió.
+
+El sistema valida que usuario y contraseña sean correctos y redirecciona a la pantalla de bienvenida.
+
+En la pantalla de bienvenida existe un botón de cerrar sesión que nulifica el token y redirecciona al login 
