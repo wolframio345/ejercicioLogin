@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:login/bloc/bloc/login_bloc_bloc.dart';
 import 'package:login/screens/screens.dart';
 
 void main() => runApp(const MyApp());
@@ -6,9 +8,13 @@ void main() => runApp(const MyApp());
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
+  @override 
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create:(context) => LoginBloc(),)
+      ]  , 
+      child:MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       routes: {
@@ -16,6 +22,7 @@ class MyApp extends StatelessWidget {
         'BienvenidaScreen':(context) => BienvenidaScreen()
       },
       initialRoute: 'LoginScreen',
+    )
     );
   }
 }
